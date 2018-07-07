@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ray.mybatis.mapper.UserMapper">
+
+    <!-- 新增用户信息 -->
+    <insert id="insert" parameterType="user">
+        INSERT INTO
+        user(name)
+        VALUES
+        (#{name})
+    </insert>
+
+    <!-- 修改用户信息 -->
+    <update id="update" parameterType="user">
+        UPDATE
+        user
+        SET
+        name=#{name}
+        WHERE
+        id=#{id}
+    </update>
+
+    <!-- 删除用户信息 -->
+    <delete id="delete">
+        DELETE
+        FROM
+        user
+        WHERE
+        id=#{id}
+    </delete>
+
+    <!-- 根据id获取用户信息 -->
+    <select id="selectById" resultType="user" parameterType="int">
+        SELECT
+        *
+        FROM
+        user
+        WHERE
+        id=#{id}
+    </select>
+
+    <!-- 查询所有用户信息 -->
+    <select id="list" resultType="user">
+        SELECT
+        *
+        FROM
+        user
+    </select>
+</mapper>

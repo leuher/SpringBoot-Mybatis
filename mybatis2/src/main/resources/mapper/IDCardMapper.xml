@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ray.mybatis.mapper.IDCardMapper">
+
+    <!-- 用户表与身份证表（一对一）映射 -->
+    <resultMap id="IDCardOfUserMap" type="iDCard">
+        <id property="cardId" column="cardid"/>
+        <result property="uid" column="uid"/>
+        <!-- 一对一 -->
+        <!-- property-映射到列结果的字段或属性 | javaType-Java 类名 -->
+        <association property="user" javaType="user">
+            <id property="id" column="id"/>
+            <result property="name" column="name"/>
+        </association>
+    </resultMap>
+
+    <!-- 获取用户信息的身份证列表 -->
+    <select id="selectIdOfUser" resultMap="IDCardOfUserMap">
+        SELECT
+        *
+        FROM
+        id_card i,
+        user u
+        WHERE
+        i.uid = u.id
+    </select>
+</mapper>
