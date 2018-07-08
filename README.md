@@ -92,8 +92,8 @@ mybatis:
   
 ---  
 # 文档说明
-### 1. SpringBoot整合Mybatis (一) 简单CRUD
-[SpringBoot整合Mybatis (一) 简单CRUD](https://blog.csdn.net/q343509740/article/details/80948422)
+### 1. SpringBoot整合Mybatis (一) 简单CRUD  
+[SpringBoot整合Mybatis (一) 简单CRUD](https://blog.csdn.net/q343509740/article/details/80948422)  
   在Springboot启动类中添加对mapper包扫描@MapperScan或者直接在Mapper类上添加注解@Mapper，建议使用@MapperScan，不然在每个Mapper都添加注解挺麻烦的。
   ```
   @SpringBootApplication
@@ -107,8 +107,8 @@ mybatis:
 
   ```
 
-### 2. SpringBoot整合Mybatis (二) 一对一
-[SpringBoot整合Mybatis (二) 一对一](https://blog.csdn.net/q343509740/article/details/80949159)
+### 2. SpringBoot整合Mybatis (二) 一对一  
+[SpringBoot整合Mybatis (二) 一对一](https://blog.csdn.net/q343509740/article/details/80949159)  
   association - 关联元素处理“有一个”类型的关系。
   ```
       <resultMap id="IDCardOfUserMap" type="iDCard">
@@ -123,8 +123,8 @@ mybatis:
     </resultMap>
   ```
    
-### 3. SpringBoot整合Mybatis (三) 一对多
-[SpringBoot整合Mybatis (三) 一对多](https://blog.csdn.net/q343509740/article/details/80949809)
+### 3. SpringBoot整合Mybatis (三) 一对多  
+[SpringBoot整合Mybatis (三) 一对多](https://blog.csdn.net/q343509740/article/details/80949809)  
   collection - 集合元素的作用几乎和关联是相同的。
   ```
     <resultMap id="phoneMap" type="user">
@@ -140,8 +140,8 @@ mybatis:
     </resultMap>
   ```
    
-### 4. SpringBoot整合Mybatis (四) 多对多
-[SpringBoot整合Mybatis (四) 多对多](https://blog.csdn.net/q343509740/article/details/80952203)
+### 4. SpringBoot整合Mybatis (四) 多对多  
+[SpringBoot整合Mybatis (四) 多对多](https://blog.csdn.net/q343509740/article/details/80952203)  
   个人对 [多对多] 的理解：就是多个一对多的组合。
   ```
     <resultMap id="comboMap" type="user" extends="userMap">
@@ -159,8 +159,8 @@ mybatis:
     </resultMap>
   ```
 
-### 5. SpringBoot整合Mybatis (五) 多对多
-[SpringBoot整合Mybatis (五) 多对多](https://blog.csdn.net/q343509740/article/details/80952979)
+### 5. SpringBoot整合Mybatis (五) 多对多  
+[SpringBoot整合Mybatis (五) 多对多](https://blog.csdn.net/q343509740/article/details/80952979)  
   个人对 [多对多] 的理解：就是多个一对多的组合。
   ```
       <resultMap id="userMap" type="combo" extends="comboMap">
@@ -182,9 +182,9 @@ mybatis:
     </resultMap>
   ```
 
-### 6. SpringBoot整合Mybatis (六) Generator
-[SpringBoot整合Mybatis (六) Generator](https://blog.csdn.net/q343509740/article/details/80958468)
-  MyBatis Generator (MBG) 是一个Mybatis的代码生成器 MyBatis 和 iBATIS. 他可以生成Mybatis各个版本的代码，和iBATIS 2.2.0版本以后的代码。
+### 6. SpringBoot整合Mybatis (六) Generator  
+[SpringBoot整合Mybatis (六) Generator](https://blog.csdn.net/q343509740/article/details/80958468)  
+  MyBatis Generator (MBG) 是一个Mybatis的代码生成器 MyBatis 和 iBATIS. 他可以生成Mybatis各个版本的代码，和iBATIS 2.2.0版本以后的代码。  
   配置文件
   ```
               <plugin>
@@ -224,12 +224,12 @@ mybatis:
             </plugin>
   ```
   
-  Mybatis-Generator配置
+  Mybatis-Generator配置  
   [mybatis-generator.xml](https://github.com/q343509740/SpringBoot-Mybatis/blob/master/mybatis6/src/main/resources/mybatis-generator.xml)
 
-### 7. SpringBoot整合Mybatis (七) Mapper
-[SpringBoot整合Mybatis (七) Mapper](https://blog.csdn.net/q343509740/article/details/80961550)
-  通用 Mapper 是为了解决 MyBatis 使用中 90% 的基本操作，使用它可以很方便的进行开发，可以节省开发人员大量的时间。
+### 7. SpringBoot整合Mybatis (七) Mapper  
+[SpringBoot整合Mybatis (七) Mapper](https://blog.csdn.net/q343509740/article/details/80961550)  
+  通用 Mapper 是为了解决 MyBatis 使用中 90% 的基本操作，使用它可以很方便的进行开发，可以节省开发人员大量的时间。  
   配置文件
   ```
    # Mapper
@@ -241,16 +241,16 @@ mybatis:
     # 取回主键的方式
     identity: MYSQL
   ```
-  
+    
   简单调用(继承自定义Mapper接口，且该自定义Mapper接口不能被扫描)
   ```
   public interface CityMapper extends MyMapper<City> {
   }
   ```
 
-### 8. SpringBoot整合Mybatis (八) PageHelper
-[SpringBoot整合Mybatis (八) PageHelper](https://blog.csdn.net/q343509740/article/details/80963424)
-  如果你也在用 MyBatis，建议尝试该分页插件，这一定是最方便使用的分页插件。分页插件支持任何复杂的单表、多表分页。
+### 8. SpringBoot整合Mybatis (八) PageHelper  
+[SpringBoot整合Mybatis (八) PageHelper](https://blog.csdn.net/q343509740/article/details/80963424)  
+  如果你也在用 MyBatis，建议尝试该分页插件，这一定是最方便使用的分页插件。分页插件支持任何复杂的单表、多表分页。  
   配置文件
   ```
   # PageHelper
@@ -262,7 +262,7 @@ mybatis:
     # 支持通过 Mapper 接口参数来传递分页参数
     support-methods-arguments: true
   ```
-  
+    
   简单调用(动态page)
   ```
   PageHelper.startPage(page,5);
@@ -271,16 +271,16 @@ mybatis:
 
 ---
 # 相关资料
-### 1.Mybatis 3 | 简介
+### 1.Mybatis 3 | 简介  
 [Mybatis 3 | 简介](http://www.mybatis.org/mybatis-3/zh/index.html)
 
-### 2.Mybatis 通用 Mapper4
+### 2.Mybatis 通用 Mapper4  
 [通用 Mapper4](https://gitee.com/free/Mapper/wikis/Home)
 
-### 3.MyBatis 分页插件 PageHelper
+### 3.MyBatis 分页插件 PageHelper  
 [分页插件 PageHelper](https://pagehelper.github.io/)
 
-### 4.MyBatis Generator | 简介
+### 4.MyBatis Generator | 简介  
 [MyBatis Generator](http://mbg.cndocs.ml/)
 
 ---
