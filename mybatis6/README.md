@@ -279,3 +279,5 @@ mapper:
     </generatorConfiguration>
     ```
   
+  ### 8.运行Maven插件  
+    mybatis-generator:generate
