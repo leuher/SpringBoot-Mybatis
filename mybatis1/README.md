@@ -1,4 +1,4 @@
-# mybatis1 简介
+# SpringBoot整合Mybatis (一) 简单CRUD
 
 ### 1.添加依赖  
   JDBC、Web、Mybatis、Mysql、Test
